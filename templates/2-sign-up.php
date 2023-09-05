@@ -1,0 +1,213 @@
+<?php 
+    include_once "../init.php";
+    include_once '../connection.php';
+    
+    // User login check
+    if (isset($_SESSION['UserId'])) {
+      header('Location: 3-Dashboard.php');
+    }
+
+
+    if(isset($_POST['register']))
+    {
+        // Storing image path in database
+        if(empty($_FILES['inpFile']['name']))
+        {
+            $target = '../static/images/userlogo.png';
+        }
+        else
+        {
+            // Unique profile image name for each user
+            $profileImageName = time() .'_'. $_FILES['inpFile']['name'];
+            $target = '../static/profileImages/' . $profileImageName;
+        }
+        
+
+        $fullname = $_POST['full_name'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $email = $_POST['email'];
+        $signupError = "";
+
+        // Form validation
+        $email = $getFromU->checkInput($email);
+        $fullname = $getFromU->checkInput($fullname);
+        $username = $getFromU->checkInput($username);
+        $password = $getFromU->checkInput($password);
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+        {
+            $signupError = "Email i pavlefshëm";
+        } 
+        elseif (strlen($fullname) > 30 || (strlen($fullname)) < 2) 
+        {
+            $signupError = "Emri duhet të jetë nga 2-30 karaktere";
+        } 
+        elseif (strlen($username) > 30 || (strlen($username)) < 3) 
+        {
+            $signupError = "Emri i përdoruesit duhet të jetë nga 3-30 karaktere";
+        } 
+        elseif (strlen($password) < 6) 
+        {
+            $signupError = "Fjalëkalimi është shumë i shkurtër";
+        }
+        elseif (strlen($password) >30) 
+        {
+            $signupError = "Fjalëkalimi është shumë i gjatë";
+        }
+        else 
+        {
+            if ($getFromU->checkEmail($email) === true) 
+            {
+                $signupError = "Email tashmë është regjistruar";
+            } 
+        
+            if ($getFromU->checkUsername($username) === true) 
+            {
+                $signupError = "Emri i përdoruesit tashmë ekziston";
+            }
+            else 
+            {
+                move_uploaded_file($_FILES['inpFile']['tmp_name'], $target);
+                $user_id = $getFromU->create('user', array('Email' => $email,'Password' => md5($password), 'Full_Name' => $fullname, 'Username' => $username, 'Photo' =>$target, 'RegDate' => date("Y-m-d H:i:s")));
+                $_SESSION['UserId'] = $user_id; 
+                $_SESSION['swal'] = "<script>
+                    Swal.fire({
+                        title: 'Yay!',
+                        text: 'Urime! Tani jeni një përdorues i regjistruar',
+                        icon: 'success',
+                        confirmButtonText: 'Done'
+                    })
+                    </script>";
+                header('Location: 3-Dashboard.php');
+            }
+        }
+        
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/wallet.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="../static/css/2-sign-up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>Expense Tracker</title>    
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="mob-hidden">
+            <h1>Hap nje llogari e re!</h1>
+        </div>
+
+        <div class="img-container">
+            <h1>Hape llogarine tuaj!</h1>
+            <img src="../static/images/registration.png" alt="">    
+        </div>
+
+        <form action="2-sign-up.php" method="post" id="form" onsubmit = "return validate()" enctype="multipart/form-data">
+            
+            <!-- Image Upload -->
+            <div class="image-preview" id="imagePreview">
+                <img src="" alt="Image Preview" class="image-preview__image" id="profileDisplay">
+                <span class="image-preview__default-text"><img src="../static/images/userlogo.png" alt=""></span>
+            </div>
+            <label for="imageUpload" class="user-pic-btn" style="cursor: pointer;">Shto foto</label>
+            <input type="file" name="inpFile" id="imageUpload" accept="image/*" style="display: none">
+            
+            <!-- User details -->
+            <div class="group">
+                <div class="form-control">
+                    <i class="fa fa-user u1" aria-hidden="true"></i>
+                    <input class="fname" onkeypress="return (event.charCode > 64 && 
+                        event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" type="text" name="full_name" id="fullname" minlength="2" maxlength="30" placeholder="Emri dhe mbiemri" required>
+                    <br>
+                    <small></small>
+                </div>
+
+                <div class="form-control">
+                    <i class="fa fa-envelope u2" aria-hidden="true"></i>
+                    <input type="email" name="email" id="email" placeholder="Emaili" required>
+                    <br>
+                    <small></small>
+                </div>
+                
+
+                <div class="form-control">
+                    <i class="fa fa-user-plus u3" aria-hidden="true"></i>
+                    <input type="text" name="username" id="username" placeholder="Emri" minlength="3" maxlength="30" required>
+                    <br>
+                    <small></small>
+                    <span id="uname_response" style="font-family: 'Source Sans Pro'; font-size:0.8em ; color:red; font-weight:bold"></span>
+                </div>
+                
+                <div class="form-control">
+                    <i class="fa fa-key u4" aria-hidden="true"></i>
+                    <input type="password" name="password" id="password" placeholder="Fjalekalimi" minlength="6" maxlength="30" autocomplete="on" required>
+                    <br>
+                    <small></small>
+                </div>
+
+                <div class="form-control">   
+                    <i class="fa fa-key u4" aria-hidden="true"></i>
+                    <input type="password" name="password_confirm" id="confirmpassword" minlength="6" maxlength="30" placeholder="Konfirmo fjalekalimin" autocomplete="on" required>
+                    <br>
+                    <small></small>
+                </div>
+                
+            </div>
+            <button type="submit" value="Submit" name="register">Kompleto</button>
+            <br>
+            <div class="new-account">
+                <span style="color: rgba(0, 0, 0, 0.54); font-weight: bolder; font-family: 'Source Sans Pro';">Kam nje llogari?</span> 
+                <a href="../index.php" style="text-decoration: none;"><span style="color: rgba(5, 0, 255, 0.81); font-weight: bolder; font-family: 'Source Sans Pro';">Kthehu prapa!</span></a>
+            </div>
+            <?php  
+                if (isset($signupError)) {
+                    $font = "Source Sans Pro";
+                    echo '<div style="color: red;font-family:'.$font.';">'.$signupError.'</div>';
+                }
+	        ?>
+        </form>
+
+    </div>
+    
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#username").keyup(function()
+            {
+                var username = $(this).val().trim();
+                if(username != '')
+                {
+                    $("#username").css({'margin-bottom':'5px'});
+                    $("#uname_response").css({'margin-bottom':'15px'});
+                    $.ajax({
+                        url: '../ajaxfile.php',
+                        type: 'post',
+                        data: {username: username},
+                        success: function(response){
+
+                            $('#uname_response').html(response);
+
+                        }
+                    });
+                }
+                else
+                {
+                    $("#uname_response").html("<br/>");
+                }
+            });
+
+        });
+    </script>
+    <script src="../static/js/2-sign-up.js"></script>
+
+</body>
+</html>
