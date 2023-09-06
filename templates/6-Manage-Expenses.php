@@ -33,7 +33,7 @@
                         
                         <i class="fas fa-ellipsis-h"></i>
                         <h3 style="font-family:'Source Sans Pro'; font-size: 1.5em;">
-                            Expenses
+                            Shpenzimet
                         </h3>
                    </div>
                    <div class="card-content">
@@ -41,10 +41,10 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Item</th>
-									<th>Cost</th>
-									<th>Date</th>
-									<th>Action</th>
+									<th>Artikulli</th>
+									<th>Kostoja</th>
+									<th>Data</th>
+									<th>Aksioni</th>
 								</tr>
 							</thead>
 							<tbody>
