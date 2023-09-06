@@ -36,17 +36,17 @@
                         <input type="text" class="text-input"  style="width: 100%;" value=<?php echo '"'.$fullname.'"' ?>  readonly><br>
                     </div>
                     <div>
-                        <p>Emri i user-it:</p>
+                        <p>Emri i përdorues-it:</p>
                         <input type="text" class="text-input"  style="width: 100%;" value=<?php echo '"'.$usr_name.'"' ?> readonly><br>
                     </div>
 
                     <div>
-                        <p>Emaili:</p>
+                        <p>Llogaria:</p>
                         <input type="email " style="width: 100%;" class="text-input" value=<?php echo '"'.$emailid.'"' ?> readonly><br>
                     </div>
 
                     <div>
-                        <p>Registration Date:</p>
+                        <p>Data e regjistrimit:</p>
                         <input type="datetime" class="text-input" style="width: 100%; font-size: 1.1em; padding-left: 45px;" value=<?php echo '"'.$JoinDate.'"' ?> readonly><br>
                     </div>
                     <br>

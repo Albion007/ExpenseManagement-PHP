@@ -47,7 +47,7 @@
                     </div>
                                                     
                     <div class="form-group has-success"><br>
-                        <button type="submit" class="pressbutton" name="yrsubmit">Paraqit</button>
+                        <button type="submit" class="pressbutton" name="yrsubmit">Paraqisni</button>
                     </div>								
                     
                     </div>

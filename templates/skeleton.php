@@ -167,7 +167,7 @@
                         <i class="fas fa-calendar"></i>
                     </div>
                     <span>
-                        Reporti vjetor
+                        Raporti vjetor
                     </span>
                 </a>
             </li>

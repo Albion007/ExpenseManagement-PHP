@@ -30,7 +30,7 @@
                             <small style="font-family: 'Source Sans Pro'; font-size:1.01em;"></small>        
                         </div>									
                         <div><br>
-                        <button type="submit" class="pressbutton" name="mthsubmit">Paraqit</button>
+                        <button type="submit" class="pressbutton" name="mthsubmit">Paraqisni</button>
                         </div>								                            
                 </form>
                 

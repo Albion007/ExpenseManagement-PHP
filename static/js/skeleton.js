@@ -97,7 +97,7 @@ function open1() {
                                 <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 </div>
                                 <span>
-                                    Add Expenses
+                                    Shtoni shpenzimet
                                 </span>
                             </a>
                         </li>`
@@ -107,7 +107,7 @@ function open1() {
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                     </div>
                                     <span>
-                                        Manage Expenses
+                                        Menaxhoni shpenzimet
                                     </span>
                                 </a>
                             </li>`
@@ -121,7 +121,7 @@ function open1() {
                                 <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 </div>
                                 <span>
-                                    Add Expenses
+                                    Shtoni shpenzimet
                                 </span>
                                 </a>
                             </li>`
@@ -131,7 +131,7 @@ function open1() {
                                 <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 </div>
                                 <span>
-                                    Manage Expenses
+                                    Menaxhoni shpenzimet
                                 </span>
                                 </a>
                             </li>`
@@ -155,7 +155,7 @@ function open2() {
                                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                     </div>
                                     <span>
-                                        Datewise Report
+                                        Raporti i datës
                                     </span>
                                 </a>
                             </li>`
@@ -165,7 +165,7 @@ function open2() {
                                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                     </div>
                                     <span>
-                                        Monthly Report
+                                        Raporti mujor
                                     </span>
                                 </a>
                             </li>`
@@ -176,7 +176,7 @@ function open2() {
                                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                     </div>
                                     <span>
-                                        Yearly Report
+                                        Raporti vjetor
                                     </span>
                                 </a>
                             </li>`
@@ -190,7 +190,7 @@ function open2() {
                                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                     </div>
                                     <span>
-                                        Datewise Report
+                                        Raporti i datës
                                     </span>
                                 </a>
                             </li>`
@@ -200,7 +200,7 @@ function open2() {
                                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                     </div>
                                     <span>
-                                        Monthly Report
+                                        Raporti mujor
                                     </span>
                                 </a>
                             </li>`
@@ -211,7 +211,7 @@ function open2() {
                                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                     </div>
                                     <span>
-                                        Yearly Report
+                                        Raporti vjetor
                                     </span>
                                 </a>
                             </li>`
