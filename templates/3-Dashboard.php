@@ -25,7 +25,7 @@
     $today_expense = $getFromE->Expenses($_SESSION['UserId'],0);
     if($today_expense == NULL)
     {
-        $today_expense = "No Expenses Logged Today";
+        $today_expense = "Nuk është regjistruar asnjë shpenzim sot";
     }
     else
     {
@@ -36,7 +36,7 @@
     $Yesterday_expense = $getFromE->Yesterday_expenses($_SESSION['UserId']);
     if($Yesterday_expense == NULL)
     {
-        $Yesterday_expense = "No Expenses Logged Yesterday";
+        $Yesterday_expense = "Asnjë shpenzim nuk u regjistrua dje";
     }
     else
     {
@@ -47,7 +47,7 @@
     $week_expense = $getFromE->Expenses($_SESSION['UserId'],6);
     if($week_expense == NULL)
     {
-        $week_expense = "No Expenses Logged This Week";
+        $week_expense = "Nuk ka shpenzime të regjistruara këtë javë";
     }
     else
     {
@@ -58,7 +58,7 @@
     $monthly_expense = $getFromE->Expenses($_SESSION['UserId'],29);
     if($monthly_expense == NULL)
     {
-        $monthly_expense = "No Expenses This Month";
+        $monthly_expense = "Nuk ka shpenzime këtë muaj";
     }
     else
     {
@@ -69,7 +69,7 @@
     $total_expenses = $getFromE->totalexp($_SESSION['UserId']);
     if($total_expenses == NULL)
     {
-        $total_expenses = "No Expenses Logged Yet";
+        $total_expenses = "Nuk është regjistruar ende asnjë shpenzim";
     }
     else
     {
@@ -81,7 +81,7 @@
     $budget_left = $getFromB->checkbudget($_SESSION['UserId']);
     if($budget_left == NULL)
     {
-        $budget_left = "Not Set Yet";
+        $budget_left = "Nuk është vendosur ende";
     }
     else
     {
@@ -115,7 +115,7 @@
                     <div class="counter bg-primary" style="color:white;">
                         <p><i class="fas fa-undo-alt"></i></p>
                         <h3>
-                            Yesterday's Expenses
+                            Shpenzimet e djeshme
                         </h3>
                         <p style="font-size: 1.2em;">
                             <?php echo $Yesterday_expense ?>
@@ -128,7 +128,7 @@
                     <div class="counter bg-warning" style="color:white;">
                         <p><i class="fas fa-calendar-week"></i></p>
                         <h3>
-                            Last 7 day's Expenses
+                            Shpenzimet e 7 ditëve të fundit
                         </h3>
                         <p style="font-size: 1.2em;">
                             <?php echo $week_expense ?>
@@ -141,7 +141,7 @@
                     <div class="counter bg-vio" style="color:white;">
                         <p><i class="fas fa-calendar"></i></p>
                         <h3>
-                            Last 30 day's Expenses
+                            Shpenzimet e 30 ditëve të fundit
                         </h3>
                         <p style="font-size: 1.2em;">
                             <?php echo $monthly_expense ?>
@@ -154,7 +154,7 @@
                     <div class="counter bg-success" style="color:white;">
                         <p><i class="fas fa-dollar-sign"></i></p>
                         <h3>
-                            Monthly Budget Left
+                            Buxheti mujor i mbetur
                         </h3>
                         <p style="font-size: 1.2em;">
                             <?php echo $budget_left ?>
@@ -167,7 +167,7 @@
                     <div class="counter bg-yell" style="color:white;">
                         <p><i class="fas fa-file-invoice-dollar" aria-hidden="true"></i></p>
                         <h3>
-                            Total Expenses
+                            Shpenzimet totale
                         </h3>
                         <p style="font-size: 1.2em;">
                             <?php echo $total_expenses ?>
