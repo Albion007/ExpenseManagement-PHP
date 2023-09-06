@@ -41,10 +41,10 @@
                     <div class="counter"  style="height: 40vh; display: flex; align-items: center; justify-content: center;">
                         <form action="" method="post"> 
                                 <p style="font-size: 1.4em; color:black; font-family:'Source Sans Pro'">
-                                    Enter your budget for this month:
+                                    Shkruani buxhetin tuaj për këtë muaj:
                                 </p><br>
                                 <input type='text' name="budget" onkeypress='validate(event)' class="text-input" style="color:black;font-size: 1.2em;;background: rgba(0,0,0,0);text-align: center; border: none; outline: none; border-bottom: 2px solid black;" required/><br><br><br>
-                                <button type="submit" name="enterbudget" class="pressbutton">Submit</button>
+                                <button type="submit" name="enterbudget" class="pressbutton">Paraqisni</button>
                         </form>
                     </div>
                 </div>

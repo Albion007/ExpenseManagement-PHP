@@ -26,22 +26,22 @@
                 <div class="counter" style="display: flex; align-items: center; justify-content: center;">
                 
                 <form action="">
-                    <h1 style="font-family: 'Source Sans Pro'">Profile</h1>
+                    <h1 style="font-family: 'Source Sans Pro'">Profili</h1>
 
                     <div>
                         <img style="width:100px; height:100px; object-fit: cover; border-radius: 50%;" src=<?php echo '"'.$picture.'"' ?> alt="">
                     </div>
                     <div>
-                        <p>Full Name:</p>
+                        <p>Emri i plotë:</p>
                         <input type="text" class="text-input"  style="width: 100%;" value=<?php echo '"'.$fullname.'"' ?>  readonly><br>
                     </div>
                     <div>
-                        <p>User Name:</p>
+                        <p>Emri i user-it:</p>
                         <input type="text" class="text-input"  style="width: 100%;" value=<?php echo '"'.$usr_name.'"' ?> readonly><br>
                     </div>
 
                     <div>
-                        <p>Email Id:</p>
+                        <p>Emaili:</p>
                         <input type="email " style="width: 100%;" class="text-input" value=<?php echo '"'.$emailid.'"' ?> readonly><br>
                     </div>
 
@@ -52,7 +52,7 @@
                     <br>
                                                     
                     <div><br>
-                        <a href="11-changepass.php"><button type="button" class="pressbutton" name="submit">Change Password</button></a>
+                        <a href="11-changepass.php"><button type="button" class="pressbutton" name="submit">Ndrysho fjalëkalimin</button></a>
                     </div>								
                     
                 </form>

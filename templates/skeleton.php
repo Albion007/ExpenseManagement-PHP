@@ -23,7 +23,7 @@
     <script src="../static/js/yearpicker.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <title>Expense Management</title>
+    <title>Menaxhimi i shpenzimeve</title>
     
 </head>
 
@@ -43,7 +43,7 @@
         </ul>
 
         <!-- end nav left  -->
-        <h1 class="navbar-text">Expense Management System</h1>
+        <h1 class="navbar-text">Sistemi për menaxhimin e shpenzimeve</h1>
         <!-- nav right  -->
         <ul class="navbar-nav nav-right">
             <!-- <li class="nav-item">
@@ -61,7 +61,7 @@
                                 <div>
                                     <i class="fas fa-user-tie"></i>
                                 </div>
-                                <span>Profile</span>
+                                <span>Profili</span>
                             </a>
                         </li>
                         <li class="dropdown-menu-item">
@@ -69,7 +69,7 @@
                                 <div>
                                     <i class="fas fa-sign-out-alt"></i>
                                 </div>
-                                <span>Logout</span>
+                                <span>Dilni</span>
                             </a>
                         </li>
                     </ul>

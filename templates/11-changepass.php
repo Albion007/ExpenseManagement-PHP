@@ -27,11 +27,11 @@
         if($confirmpass === $old_pass_hash)
         {
             $getFromU->update('user',$_SESSION['UserId'], array('Password' => md5($_POST['newpass'])));
-            function_alert("Password Updated Successfully");
+            function_alert("Fjalëkalimi është ndryshuar me sukses!");
         }
         else
         {
-            function_alert("Could Not Change Password");
+            function_alert("Fjalëkalimi nuk është ndryshuar");
         }
     }
 
@@ -45,23 +45,23 @@
                     <form action="" method="post" onsubmit="return validate()" id="form">
 								
 								<div class="formcontrol">
-									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">Current Password:</label><br>
+									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">Fjalëkalimi i tanishëm:</label><br>
 									<input type="password" class="text-input" name="oldpass" id="oldpass" value="" required="true" style="padding-top: 10px; "><br>
                                     <small></small>
                                 </div>
                                 <div class="formcontrol">
-									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">New Password:</label><br>
+									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">Fjalëkalimi i ri:</label><br>
 									<input type="password" class="text-input" name="newpass" id="newpass" value="" required="true" style="padding-top: 10px; "><br>
                                     <small></small>
                                 </div>
                                 <div class="formcontrol">
-									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">Re-Type Password:</label><br>
+									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">Shkruaj edhe njëherë fjalëkalimin:</label><br>
 									<input type="password" class="text-input" name="cnewpass" id="cpass" value="" required="true" style="padding-top: 10px; "><br>
                                     <small></small>
                                 </div>
 																
 								<div><br>
-									<button type="submit" class="pressbutton" name="changepwd">Change Password</button>
+									<button type="submit" class="pressbutton" name="changepwd">Ndrysho fjalëkalimin</button>
 								</div>								
 								
 								</div>
