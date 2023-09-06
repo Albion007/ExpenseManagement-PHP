@@ -22,14 +22,14 @@
                     <div class="counter" style="display: flex; align-items: center; justify-content: center;">
                     
                     <form action="7-Datewise-Detailed.php" method="post" onsubmit = "return validate()" id="datewiseform">
-                    <h1 style="display: block; font-family: 'Source Sans Pro'">Datewise Expense Report</h1>
+                    <h1 style="display: block; font-family: 'Source Sans Pro'">Raporti i shpenzimeve të datës</h1>
 								<div class="form-send">
-									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">From:</label><br><br>
+									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">Nga:</label><br><br>
 									<input class="text-input" type="date" value="" name="dtfrom" id="dtwisefrom" required="true" style="width: 100%; max-width: 100%; padding-top: 8px; "><br>
                                     <br><br>
                                 </div>
                                 <div clas="form-send">
-									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">To:</label><br><br>
+									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">Deri:</label><br><br>
 									<input class="text-input" type="date" value="" name="dtto" id="dtwiseto" required="true" style="width: 100%; max-width: 100%; padding-top: 8px; ">
                                     <br>
                                     <br>
@@ -37,7 +37,7 @@
                                 </div>
 																
 								<div><br>
-									<button type="submit" class="pressbutton" name="datewise" >Submit</button>
+									<button type="submit" class="pressbutton" name="datewise" >Paraqisni</button>
 								</div>								
 								
 								</div>
