@@ -17,7 +17,7 @@
 				<div class="card-header">
 					
 					<!-- <i class="fas fa-ellipsis-h"></i> -->
-					<h4 style="font-family:'Source Sans Pro'; font-size: 1.3em; text-align: center">Expenses incurred between <?php echo $_SESSION['yrfrom'] ?> and <?php echo $_SESSION['yrto'] ?> </h4>    
+					<h4 style="font-family:'Source Sans Pro'; font-size: 1.3em; text-align: center">Shpenzimet e bëra ndërmjet <?php echo $_SESSION['yrfrom'] ?> and <?php echo $_SESSION['yrto'] ?> </h4>    
 
 				</div>
 				<div class="card-content">
@@ -25,9 +25,9 @@
 						<thead>
 							<tr>
 								<th>#</th>
-								<th>Item</th>
-								<th>Cost</th>
-								<th>Date</th>
+								<th>Artikulli</th>
+								<th>Kostoja</th>
+								<th>Data</th>
 							</tr>
 						</thead>
 						<tbody>
