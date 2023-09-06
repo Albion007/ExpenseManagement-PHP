@@ -87,7 +87,7 @@
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
                     <span>
-                        Dashboard
+                        Paneli i kontrollit
                     </span>
                 </a>
             </li>
@@ -97,7 +97,7 @@
                         <i class="fas fa-coins"></i>
                     </div>
                     <span>
-                        Set Budget 
+                        Cakto buxhetin 
                     </span>
                 </a>
             </li>
@@ -107,7 +107,7 @@
                         <i class="fa fa-plus-circle"></i>
                     </div>
                     <span>
-                        Expenses
+                        Shpenzimet
                     </span>
                 </a>
             </li>
@@ -117,7 +117,7 @@
                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </div>
                     <span>
-                        Add Expenses
+                        Shtoni shpenzimet
                     </span>
                 </a>
             </li>
@@ -127,7 +127,7 @@
                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </div>
                     <span>
-                        Manage Expenses
+                        Menaxho shpenzimet
                     </span>
                 </a>
             </li>
@@ -137,7 +137,7 @@
                         <i class="fas fa-calendar-day"></i>
                     </div>
                     <span>
-                        Expense Report
+                        Raporti i shpenzimeve
                     </span>
                 </a>
             </li>
@@ -147,7 +147,7 @@
                         <i class="fas fa-calendar-day"></i>
                     </div>
                     <span>
-                        Datewise Report
+                        Raporti i datës
                     </span>
                 </a>
             </li>
@@ -157,7 +157,7 @@
                         <i class="fas fa-calendar-week"></i>
                     </div>
                     <span>
-                        Monthly Report
+                        Raporti mujor
                     </span>
                 </a>
             </li>
@@ -167,7 +167,7 @@
                         <i class="fas fa-calendar"></i>
                     </div>
                     <span>
-                        Yearly Report
+                        Reporti vjetor
                     </span>
                 </a>
             </li>

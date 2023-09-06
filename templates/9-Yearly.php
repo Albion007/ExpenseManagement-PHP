@@ -34,20 +34,20 @@
                 <div class="counter" style="display: flex; align-items: center; justify-content: center;">
                 
                 <form action="" method="post">
-                    <h1 style="display: block; font-family: 'Source Sans Pro'">Yearwise Expense Report</h1>
+                    <h1 style="display: block; font-family: 'Source Sans Pro'">Raporti vjetor i shpenzimeve</h1>
                     <div>
-                        <label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">From:</label><br>
+                        <label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">Nga:</label><br>
                         <input class="text-input yearpicker"  type="text" id="yrfrom"  value="" name="yrfrom" required="true" style="width: 100%; padding-top: 8px; "><br><br><br>                                
                     </div>
 
                     <div>
-                        <label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">To:</label><br>
+                        <label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">Deri:</label><br>
                         <input class="text-input yearpicker" type="text" id="yrto" value="" name="yrto" required="true" style="width: 100%; padding-top: 8px; "><br><br>
                         <small style="font-family:'Source Sans Pro'; font-size: 1.01em;"><?php if(isset($error)){echo $error;} ?></small>
                     </div>
                                                     
                     <div class="form-group has-success"><br>
-                        <button type="submit" class="pressbutton" name="yrsubmit">Submit</button>
+                        <button type="submit" class="pressbutton" name="yrsubmit">Paraqit</button>
                     </div>								
                     
                     </div>

@@ -33,7 +33,7 @@
                     <div class="counter" style="height: 60vh; display: flex; align-items: center; justify-content: center;">
                     <form action="" method="post">
 								<div>
-									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">Data e shpenzimit:</label><br><br>
+									<label style="font-family: 'Source Sans Pro'; font-size: 1.3em; ">Data/muaji/ora/pm ose am e shpenzimit:</label><br><br>
 									<input class="text-input" type="datetime-local" value="" name="dateexpense" required="true" style="width: 100%; padding-top: 8px; "><br><br>
 								</div>
 								<div>
