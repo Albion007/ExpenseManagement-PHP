@@ -16,7 +16,7 @@
                    <div class="card-header">
                         
                         <!-- <i class="fas fa-ellipsis-h"></i> -->
-                        <h4 style="font-family:'Source Sans Pro'; font-size: 1.3em; text-align: center">Expenses incurred between <?php echo date("d-m-Y",strtotime($_POST['dtfrom'])) ?> and <?php echo date("d-m-Y",strtotime($_POST['dtto'])) ?></h4>    
+                        <h4 style="font-family:'Source Sans Pro'; font-size: 1.3em; text-align: center">Shpenzimet e bëra ndërmjet <?php echo date("d-m-Y",strtotime($_POST['dtfrom'])) ?> and <?php echo date("d-m-Y",strtotime($_POST['dtto'])) ?></h4>    
 
                    </div>
                    <div class="card-content">
@@ -24,9 +24,9 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Desc.</th>
-									<th>Cost</th>
-									<th>Date</th>
+									<th>Përshkrimi</th>
+									<th>Kostoja</th>
+									<th>Data</th>
 								</tr>
 							</thead>
 							<tbody id="chart-facilitate">
@@ -57,7 +57,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h3>
-                            Expense Graph
+                            Grafi i shpenzimeve
                         </h3>
 						<div class="card-content">
 							<canvas id="myChart" ></canvas>
