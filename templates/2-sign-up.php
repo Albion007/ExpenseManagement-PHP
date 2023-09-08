@@ -76,7 +76,7 @@
                         title: 'Yay!',
                         text: 'Urime! Tani jeni një përdorues i regjistruar',
                         icon: 'success',
-                        confirmButtonText: 'Done'
+                        confirmButtonText: 'U krye'
                     })
                     </script>";
                 header('Location: 3-Dashboard.php');

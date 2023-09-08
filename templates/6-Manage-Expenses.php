@@ -14,10 +14,10 @@
 		$getFromE->delexp($_POST['ID']);
 		echo "<script>
 				Swal.fire({
-					title: 'Done!',
-					text: 'Record deleted successfully',
+					title: 'U krye!',
+					text: 'Regjistrimi u fshi me sukses',
 					icon: 'success',
-					confirmButtonText: 'Close'
+					confirmButtonText: 'Mbylle'
 				})
 				</script>";
 	}

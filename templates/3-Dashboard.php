@@ -102,7 +102,7 @@
                     <div class="counter bg-danger" style="color:white;">
                         <p><i class="fas fa-tasks"></i></p>
                         <h3>
-                            Today's Expenses
+                            Shpenzimet e sotme
                         </h3>
                         <p style="font-size: 1.2em;">
                             <?php echo $today_expense ?>

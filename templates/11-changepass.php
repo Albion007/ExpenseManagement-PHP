@@ -20,7 +20,7 @@
                 title: '',
                 text: '$message',
                 icon: '',
-                confirmButtonText: 'Okay!'
+                confirmButtonText: 'Në rregull!'
             })
             </script>";
         } 

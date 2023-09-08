@@ -10,10 +10,10 @@
     {
         echo '<script>
         Swal.fire({
-            title: "Done!",
-            text: "Records Updated Successfully",
+            title: "Përfunduar!",
+            text: "Regjistrimet u përditësuan me sukses",
             icon: "success",
-            confirmButtonText: "Close"
+            confirmButtonText: "Mbylle"
           })
         </script>';
 

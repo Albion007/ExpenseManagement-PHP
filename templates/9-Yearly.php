@@ -11,7 +11,7 @@
     {
         if($_POST['yrfrom'] > $_POST['yrto'])
         {
-            $error="Invalid Date Range";
+            $error="Gama e pavlefshme e datave";
         }
         else
         {

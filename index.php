@@ -15,7 +15,7 @@
             $username = $getFromU->checkInput($username);
             $password = $getFromU->checkInput($password);
             if($getFromU->login($username, $password) === false) {
-            $error = "The username or password is incorrect";
+            $error = "Emri i përdoruesit ose fjalëkalimi është i pasaktë";
             }
           } 
     }
